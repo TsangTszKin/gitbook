@@ -1,0 +1,862 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>javascript中对象的深度克隆 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="记录一个常见的面试题，javascript中对象的深度克隆  转载自： https://www.cnblogs.com/jq-melody/p/4499333.html ">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="jquery-file-upload.html" />
+    
+    
+    <link rel="prev" href="input-file大全和完全整合.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="css进阶.html">
+            
+                <a href="css进阶.html">
+            
+                    
+                    css进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="css3.html">
+            
+                <a href="css3.html">
+            
+                    
+                    css3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="flex弹性布局.html">
+            
+                <a href="flex弹性布局.html">
+            
+                    
+                    flex弹性布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="html5-postmessage窗口之间的通讯.html">
+            
+                <a href="html5-postmessage窗口之间的通讯.html">
+            
+                    
+                    html5-postmessage窗口之间的通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="input-file大全和完全整合.html">
+            
+                <a href="input-file大全和完全整合.html">
+            
+                    
+                    input-file大全和完全整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="javascript中对象的深度克隆.html">
+            
+                <a href="javascript中对象的深度克隆.html">
+            
+                    
+                    javascript中对象的深度克隆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="jquery-file-upload.html">
+            
+                <a href="jquery-file-upload.html">
+            
+                    
+                    jquery-file-upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="js高级程序设计.html">
+            
+                <a href="js高级程序设计.html">
+            
+                    
+                    js高级程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="javascript-utils.html">
+            
+                <a href="javascript-utils.html">
+            
+                    
+                    javascript-utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="前端兼容性积累.html">
+            
+                <a href="前端兼容性积累.html">
+            
+                    
+                    前端兼容性积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="vue踩坑.html">
+            
+                <a href="vue踩坑.html">
+            
+                    
+                    vue踩坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="把es6编译成es5（兼容性）.html">
+            
+                <a href="把es6编译成es5（兼容性）.html">
+            
+                    
+                    把es6编译成es5（兼容性）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="浏览器全屏显示.html">
+            
+                <a href="浏览器全屏显示.html">
+            
+                    
+                    浏览器全屏显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="整合react+mobx+axios+react-router4.html">
+            
+                <a href="整合react+mobx+axios+react-router4.html">
+            
+                    
+                    整合react+mobx+axios+react-router4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="搭建webpack+react+antd+less+css_modules.html">
+            
+                <a href="搭建webpack+react+antd+less+css_modules.html">
+            
+                    
+                    搭建webpack+react+antd+less+css_modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="prototype、__proto__与constructor.html">
+            
+                <a href="prototype、__proto__与constructor.html">
+            
+                    
+                    prototype、 proto 与constructor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="websocket教程.html">
+            
+                <a href="websocket教程.html">
+            
+                    
+                    websocket教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    后端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="java.html">
+            
+                <a href="java.html">
+            
+                    
+                    java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="jstl.html">
+            
+                <a href="jstl.html">
+            
+                    
+                    jstl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="php.html">
+            
+                <a href="php.html">
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="git常用命令.html">
+            
+                <a href="git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="hello-world.html">
+            
+                <a href="hello-world.html">
+            
+                    
+                    HEXO搭建个人博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="解决远程连接mysql错误1130.html">
+            
+                <a href="解决远程连接mysql错误1130.html">
+            
+                    
+                    解决远程连接mysql错误1130
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    项目管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="系统集成项目管理工程师.html">
+            
+                <a href="系统集成项目管理工程师.html">
+            
+                    
+                    系统集成项目管理工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >javascript中对象的深度克隆</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E00;&#x3001;js&#x4E2D;&#x7684;&#x5BF9;&#x8C61;">&#x4E00;&#x3001;js&#x4E2D;&#x7684;&#x5BF9;&#x8C61;</h1>
+<p>&#x3000;&#x3000;&#x8C08;&#x5230;&#x5BF9;&#x8C61;&#x7684;&#x514B;&#x9686;&#xFF0C;&#x5FC5;&#x5B9A;&#x8981;&#x8BF4;&#x4E00;&#x4E0B;&#x5BF9;&#x8C61;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>&#x3000;&#x3000;js&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5206;&#x4E3A;&#x4E24;&#x5927;&#x7C7B;&#xFF1A;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x548C;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;</p>
+<ul>
+<li>&#xFF08;1&#xFF09;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#xFF1A;&#x6570;&#x503C;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x3001;null&#x3001;undefined&#xFF08;&#x540E;&#x4E24;&#x4E2A;&#x662F;&#x7279;&#x6B8A;&#x7684;&#x539F;&#x59CB;&#x503C;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x505A;&#x8BE6;&#x7EC6;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x6211;&#x7684;&#x4E0A;&#x4E00;&#x7BC7;&#x535A;&#x5BA2;&#x6709;&#x8C08;&#x5230;&#x8FC7;&#x4E00;&#x4E9B;&#xFF09;</li>
+<li>&#xFF08;2&#xFF09;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#xFF1A;&#x5BF9;&#x8C61;&#x5373;&#x662F;&#x5C5E;&#x6027;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5F53;&#x7136;&#x8FD9;&#x91CC;&#x53C8;&#x4E24;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5BF9;&#x8C61;----&#x51FD;&#x6570;&#xFF08;js&#x4E2D;&#x7684;&#x4E00;&#x7B49;&#x5BF9;&#x8C61;&#xFF09;&#x3001;&#x6570;&#x7EC4;&#xFF08;&#x952E;&#x503C;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x3000;&#x3000;&#x597D;&#x4E86;&#x65E2;&#x7136;&#x5BF9;&#x8C61;&#x5206;&#x4E3A;&#x8FD9;&#x4E24;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x5728;&#x590D;&#x5236;&#x514B;&#x9686;&#x7684;&#x65F6;&#x5019;&#x662F;&#x6709;&#x5F88;&#x5927;&#x533A;&#x522B;&#x7684;&#x3002;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x9645;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x5730;&#x5740;&#xFF08;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x9645;&#x5185;&#x5BB9;&#x5355;&#x72EC;&#x5B58;&#x653E;&#xFF0C;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x6570;&#x636E;&#x5F00;&#x9500;&#x901A;&#x5E38;&#x5B58;&#x653E;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF09;&#x3002;</p>
+<p>ps&#xFF1A;&#x8BF4;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x5927;&#x5BB6;&#x8981;&#x77E5;&#x9053;&#xFF0C;&#x5BF9;&#x8C61;&#x7684;&#x539F;&#x578B;&#x4E5F;&#x662F;&#x5F15;&#x7528;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x628A;&#x539F;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x653E;&#x5728;&#x5185;&#x5B58;&#x5F53;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x539F;&#x578B;&#x94FE;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;&#x3002;</p>
+<h1 id="&#x4E8C;&#x3001;&#x514B;&#x9686;&#x7684;&#x6982;&#x5FF5;">&#x4E8C;&#x3001;&#x514B;&#x9686;&#x7684;&#x6982;&#x5FF5;</h1>
+<p>&#x3000;&#x3000;&#x6D45;&#x5EA6;&#x514B;&#x9686;&#xFF1A;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x4E3A;&#x503C;&#x4F20;&#x9012;&#xFF0C;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x4ECD;&#x4E3A;&#x5F15;&#x7528;&#x4F20;&#x9012;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x6DF1;&#x5EA6;&#x514B;&#x9686;&#xFF1A;&#x6240;&#x6709;&#x5143;&#x7D20;&#x6216;&#x5C5E;&#x6027;&#x5747;&#x5B8C;&#x5168;&#x590D;&#x5236;&#xFF0C;&#x4E0E;&#x539F;&#x5BF9;&#x8C61;&#x5B8C;&#x5168;&#x8131;&#x79BB;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6240;&#x6709;&#x5BF9;&#x4E8E;&#x65B0;&#x5BF9;&#x8C61;&#x7684;&#x4FEE;&#x6539;&#x90FD;&#x4E0D;&#x4F1A;&#x53CD;&#x6620;&#x5230;&#x539F;&#x5BF9;&#x8C61;&#x4E2D;&#x3002;</p>
+<h1 id="&#x4E09;&#x3001;&#x6D45;&#x514B;&#x9686;&#x7684;&#x8868;&#x73B0;">&#x4E09;&#x3001;&#x6D45;&#x514B;&#x9686;&#x7684;&#x8868;&#x73B0;</h1>
+<h2 id="1&#xFF0C;&#x539F;&#x59CB;&#x7C7B;&#x578B;">1&#xFF0C;&#x539F;&#x59CB;&#x7C7B;&#x578B;</h2>
+<p>&#x770B;&#x4E0B;&#x9762;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;</p>
+<pre><code>//&#x6570;&#x503C;&#x514B;&#x9686;&#x7684;&#x8868;&#x73B0;
+var a=&quot;1&quot;;
+var b=a;
+b=&quot;2&quot;;
+console.log(a);// &quot;1&quot;
+console.log(b);// &quot;2&quot;
+//&#x5B57;&#x7B26;&#x4E32;&#x514B;&#x9686;&#x7684;&#x8868;&#x73B0;
+var c=&quot;1&quot;;
+var d=c;
+d=&quot;2&quot;;
+console.log(c);// &quot;1&quot;
+console.log(d);// &quot;2&quot;
+//&#x5B57;&#x7B26;&#x4E32;&#x514B;&#x9686;&#x7684;&#x8868;&#x73B0;
+var x=true;
+var y=x;
+y=false;
+console.log(x);// true
+console.log(y);// false
+</code></pre><p>&#x3000;&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x5373;&#x4F7F;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x666E;&#x901A;&#x7684;&#x514B;&#x9686;&#x65B9;&#x5F0F;&#x4ECD;&#x80FD;&#x5F97;&#x5230;&#x6B63;&#x786E;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x539F;&#x56E0;&#x5C31;&#x662F;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="2&#x5BF9;&#x8C61;&#x7C7B;&#x578B;">2.&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</h2>
+<p>&#x524D;&#x9762;&#x8BF4;&#x8FC7;&#xFF0C;&#x51FD;&#x6570;&#x5F0F;&#x4E00;&#x7B49;&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x662F;&#x51FD;&#x6570;&#x7684;&#x514B;&#x9686;&#x901A;&#x8FC7;&#x6D45;&#x514B;&#x9686;&#x5373;&#x53EF;&#x5B9E;&#x73B0;</p>
+<pre><code>var m=function(){alert(1);};
+var n=m;
+n=function(){alert(2);};
+
+console.log(m());//1
+console.log(n());//2
+</code></pre><p>&#x5927;&#x5BB6;&#x80FD;&#x770B;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x666E;&#x901A;&#x8D4B;&#x503C;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x51FD;&#x6570;&#x7684;&#x514B;&#x9686;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x4E4B;&#x524D;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x539F;&#x56E0;&#x5C31;&#x662F;&#x51FD;&#x6570;&#x7684;&#x514B;&#x9686;&#x4F1A;&#x5728;&#x5185;&#x5B58;&#x5355;&#x72EC;&#x5F00;&#x8F9F;&#x4E00;&#x5757;&#x7A7A;&#x95F4;&#xFF0C;&#x4E92;&#x4E0D;&#x5F71;&#x54CD;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x597D;&#x4E86;&#xFF0C;&#x8BF4;&#x4E86;&#x8FD9;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x201D;&#x5173;&#x7CFB;&#x6237;&#x201C;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x8BF4;&#x8BF4;&#x666E;&#x901A;&#x7684;&#x201D;&#x9009;&#x624B;&#x201C;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x540E;&#x7EED;&#x7684;&#x4EE3;&#x7801;&#x8868;&#x73B0;&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;oPerson&#x3002;&#x4E0B;&#x9762;&#x770B;&#x4E00;&#x4E0B;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x7684;&#x6D45;&#x590D;&#x5236;&#x6709;&#x4EC0;&#x4E48;&#x5371;&#x5BB3;&#xFF1A;</p>
+<pre><code>var oPerson={
+    oName:&quot;rookiebob&quot;,
+    oAge:&quot;18&quot;,
+    oAddress:{
+        province:&quot;beijing&quot;
+    },    
+    ofavorite:[
+        &quot;swimming&quot;,
+        {reading:&quot;history book&quot;}
+    ],
+    skill:function(){
+        console.log(&quot;bob is coding&quot;);
+    }
+};
+function clone(obj){
+    var result={};
+    for(key in obj){
+        result[key]=obj[key];
+    }
+    return result;
+}
+var oNew=clone(oPerson);
+console.log(oPerson.oAddress.province);//beijing
+oNew.oAddress.province=&quot;shanghai&quot;;
+console.log(oPerson.oAddress.province);//shanghai
+</code></pre><p>&#x3000;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5927;&#x5BB6;&#x80FD;&#x770B;&#x5230;&#xFF0C;&#x7ECF;&#x8FC7;&#x5BF9;&#x8C61;&#x514B;&#x9686;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4FEE;&#x6539;oNew&#x7684;&#x5730;&#x5740;&#xFF0C;&#x53D1;&#x73B0;&#x539F;&#x5BF9;&#x8C61;oPerson&#x4E5F;&#x88AB;&#x4FEE;&#x6539;&#x4E86;&#x3002;&#x8FD9;&#x8BF4;&#x660E;&#x5BF9;&#x8C61;&#x7684;&#x514B;&#x9686;&#x4E0D;&#x591F;&#x5F7B;&#x5E95;&#xFF0C;&#x90A3;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6DF1;&#x5EA6;&#x514B;&#x9686;&#x5931;&#x8D25;&#xFF01;</p>
+<h1 id="&#x56DB;&#x3001;&#x6DF1;&#x514B;&#x9686;&#x7684;&#x5B9E;&#x73B0;">&#x56DB;&#x3001;&#x6DF1;&#x514B;&#x9686;&#x7684;&#x5B9E;&#x73B0;</h1>
+<p>&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x90FD;&#x88AB;&#x590D;&#x5236;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x77E5;&#x9053;&#x5982;&#x679C;for&#x5FAA;&#x73AF;&#x4EE5;&#x540E;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x5143;&#x7D20;&#x4ECD;&#x662F;Object&#x6216;&#x8005;Array&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x518D;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x76F4;&#x5230;&#x5143;&#x7D20;&#x662F;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x51FD;&#x6570;&#x4E3A;&#x6B62;&#x3002;&#x4E3A;&#x4E86;&#x5F97;&#x5230;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x8FD4;&#x56DE;&#x4F20;&#x5165;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<pre><code>//&#x8FD4;&#x56DE;&#x4F20;&#x9012;&#x7ED9;&#x4ED6;&#x7684;&#x4EFB;&#x610F;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;
+function isClass(o){
+    if(o===null) return &quot;Null&quot;;
+    if(o===undefined) return &quot;Undefined&quot;;
+    return Object.prototype.toString.call(o).slice(8,-1);
+}
+</code></pre><p>PS:Object.prototype.toString.call(o)&#x80FD;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x5C5E;&#x6027;&#xFF0C;&#x5F62;&#x5982;&quot;[object class]&quot;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x622A;&#x53D6;class&#xFF0C;&#x5E76;&#x80FD;&#x77E5;&#x9053;&#x4F20;&#x5165;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#x8FD9;&#x91CC;&#x6709;&#x4E24;&#x4E2A;&#x7591;&#x95EE;&#x9700;&#x8981;&#x89E3;&#x91CA;&#x4E0B;&#xFF1A;
+&#x3000;&#x3000;<img src="https://i.imgur.com/h4JnZhe.png" alt=""></p>
+<ul>
+<li><p>&#xFF08;1&#xFF09;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x76F4;&#x63A5;&#x7528;toString&#x65B9;&#x6CD5;&#xFF1F;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;toString&#x65B9;&#x6CD5;&#x88AB;&#x91CD;&#x5199;&#xFF0C;&#x4E3A;&#x4E86;&#x6B63;&#x786E;&#x7684;&#x8C03;&#x7528;toString()&#x7248;&#x672C;&#xFF0C;&#x5FC5;&#x987B;&#x95F4;&#x63A5;&#x7684;&#x8C03;&#x7528;Function.call()&#x65B9;&#x6CD5;</p>
+</li>
+<li><p>&#xFF08;2&#xFF09;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x4F7F;&#x7528;typeof&#x6765;&#x76F4;&#x63A5;&#x5224;&#x65AD;&#x7C7B;&#x578B;&#xFF1F;&#x56E0;&#x4E3A;&#x5BF9;&#x4E8E;Array&#x800C;&#x8A00;&#xFF0C;&#x4F7F;&#x7528;typeof&#xFF08;Array&#xFF09;&#x8FD4;&#x56DE;&#x7684;&#x662F;object&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x5F97;&#x5230;&#x6B63;&#x786E;&#x7684;Array&#xFF0C;&#x8FD9;&#x91CC;&#x5BF9;&#x4E8E;&#x540E;&#x7EED;&#x7684;&#x6570;&#x7EC4;&#x514B;&#x9686;&#x5C06;&#x4EA7;&#x751F;&#x81F4;&#x547D;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x5C31;&#x662F;&#x771F;&#x6B63;&#x7684;&#x6DF1;&#x5EA6;&#x514B;&#x9686;</p>
+<pre><code>//&#x6DF1;&#x5EA6;&#x514B;&#x9686;
+function deepClone(obj){
+    var result,oClass=isClass(obj);
+        //&#x786E;&#x5B9A;result&#x7684;&#x7C7B;&#x578B;
+    if(oClass===&quot;Object&quot;){
+        result={};
+    }else if(oClass===&quot;Array&quot;){
+        result=[];
+    }else{
+        return obj;
+    }
+    for(key in obj){
+        var copy=obj[key];
+        if(isClass(copy)==&quot;Object&quot;){
+            result[key]=arguments.callee(copy);//&#x9012;&#x5F52;&#x8C03;&#x7528;
+        }else if(isClass(copy)==&quot;Array&quot;){
+            result[key]=arguments.callee(copy);
+        }else{
+            result[key]=obj[key];
+        }
+    }
+    return result;
+}
+//&#x8FD4;&#x56DE;&#x4F20;&#x9012;&#x7ED9;&#x4ED6;&#x7684;&#x4EFB;&#x610F;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;
+function isClass(o){
+    if(o===null) return &quot;Null&quot;;
+    if(o===undefined) return &quot;Undefined&quot;;
+    return Object.prototype.toString.call(o).slice(8,-1);
+}
+var oPerson={
+    oName:&quot;rookiebob&quot;,
+    oAge:&quot;18&quot;,
+    oAddress:{
+        province:&quot;beijing&quot;
+    },    
+    ofavorite:[
+        &quot;swimming&quot;,
+        {reading:&quot;history book&quot;}
+    ],
+    skill:function(){
+        console.log(&quot;bob is coding&quot;);
+    }
+};
+//&#x6DF1;&#x5EA6;&#x514B;&#x9686;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;
+var oNew=deepClone(oPerson);
+
+oNew.ofavorite[1].reading=&quot;picture&quot;;
+console.log(oNew.ofavorite[1].reading);//picture
+console.log(oPerson.ofavorite[1].reading);//history book
+
+oNew.oAddress.province=&quot;shanghai&quot;;
+console.log(oPerson.oAddress.province);//beijing
+console.log(oNew.oAddress.province);//shanghai
+</code></pre><p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6DF1;&#x5EA6;&#x514B;&#x9686;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x8131;&#x79BB;&#x539F;&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x65B0;&#x5BF9;&#x8C61;&#x7684;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x90FD;&#x4E0D;&#x4F1A;&#x53CD;&#x6620;&#x5230;&#x539F;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x6DF1;&#x5EA6;&#x514B;&#x9686;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x8FD9;&#x91CC;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x70B9;&#x7684;&#x5C31;&#x662F;&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;deepClone&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x7684;result&#x4E00;&#x5B9A;&#x8981;&#x5224;&#x65AD;&#x7C7B;&#x578B;&#xFF1F;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;result&#x76F4;&#x63A5;&#x662F;{}&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x660E;&#x660E;&#x4F20;&#x8FDB;&#x53BB;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x7ED3;&#x679C;&#x4F60;&#x590D;&#x5236;&#x5B8C;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x53D8;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E86;&#x3002;</p>
+<pre><code>//&#x6DF1;&#x5EA6;&#x514B;&#x9686;
+function deepClone(obj){
+    var result={},oClass=isClass(obj);
+    // if(oClass===&quot;Object&quot;){
+    //     result={};
+    // }else if(oClass===&quot;Array&quot;){
+    //     result=[];
+    // }else{
+    //     return obj;
+    // }
+    for(key in obj){
+        var copy=obj[key];
+        if(isClass(copy)==&quot;Object&quot;){
+            result[key]=arguments.callee(copy);
+        }else if(isClass(copy)==&quot;Array&quot;){
+            result[key]=arguments.callee(copy);
+        }else{
+            result[key]=obj[key];
+        }
+    }
+    return result;
+}
+function isClass(o){
+    if(o===null) return &quot;Null&quot;;
+    if(o===undefined) return &quot;Undefined&quot;;
+    return Object.prototype.toString.call(o).slice(8,-1);
+}
+//&#x514B;&#x9686;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;
+var arr=[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;];
+var oNew=deepClone(arr);
+console.log(oNew);//Object {0: &quot;a&quot;, 1: &quot;b&quot;, 2: &quot;c&quot;}
+</code></pre><h3 id="&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x53EA;&#x8981;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x6D45;&#x62F7;&#x8D1D;&#x5C31;&#x884C;&#x4E86;">&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x53EA;&#x8981;&#x9012;&#x5F52;&#x8C03;&#x7528;&quot;&#x6D45;&#x62F7;&#x8D1D;&quot;&#x5C31;&#x884C;&#x4E86;</h3>
+<pre><code>&#x3000;&#x3000;function deepCopy(p, c) {
+
+&#x3000;&#x3000;&#x3000;&#x3000;var c = c || {};
+
+&#x3000;&#x3000;&#x3000;&#x3000;for (var i in p) {
+
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;if (typeof p[i] === &apos;object&apos;) {
+
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;c[i] = (p[i].constructor === Array) ? [] : {};
+
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;deepCopy(p[i], c[i]);
+
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;} else {
+
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;c[i] = p[i];
+
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;}
+&#x3000;&#x3000;&#x3000;&#x3000;}
+
+&#x3000;&#x3000;&#x3000;&#x3000;return c;
+&#x3000;&#x3000;}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="input-file大全和完全整合.html" class="navigation navigation-prev " aria-label="Previous page: input-file大全和完全整合">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="jquery-file-upload.html" class="navigation navigation-next " aria-label="Next page: jquery-file-upload">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"javascript中对象的深度克隆","date":"2018-07-03T17:14:22.000Z","tags":"js,","categories":"前端","description":"记录一个常见的面试题，javascript中对象的深度克隆  转载自： https://www.cnblogs.com/jq-melody/p/4499333.html ","level":"1.2.6","depth":2,"next":{"title":"jquery-file-upload","level":"1.2.7","depth":2,"path":"jquery-file-upload.md","ref":"jquery-file-upload.md","articles":[]},"previous":{"title":"input-file大全和完全整合","level":"1.2.5","depth":2,"path":"input-file大全和完全整合.md","ref":"input-file大全和完全整合.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript中对象的深度克隆.md","mtime":"2018-12-12T13:40:59.370Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-13T13:26:48.199Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

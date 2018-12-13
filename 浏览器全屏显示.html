@@ -1,0 +1,696 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>浏览器全屏显示 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="项目中需要将后台浏览器的窗口全屏，也就是我们点击一个按钮要实现按F11全屏的效果。 在HTML5中,W3C制定了关于全屏的API，就可以实现全屏幕的效果，也可以让页面中的图片，视频等全屏目前只有google chrome 15 +, safri5.1+,firfox10+,IE11支持">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="整合react+mobx+axios+react-router4.html" />
+    
+    
+    <link rel="prev" href="把es6编译成es5（兼容性）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="css进阶.html">
+            
+                <a href="css进阶.html">
+            
+                    
+                    css进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="css3.html">
+            
+                <a href="css3.html">
+            
+                    
+                    css3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="flex弹性布局.html">
+            
+                <a href="flex弹性布局.html">
+            
+                    
+                    flex弹性布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="html5-postmessage窗口之间的通讯.html">
+            
+                <a href="html5-postmessage窗口之间的通讯.html">
+            
+                    
+                    html5-postmessage窗口之间的通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="input-file大全和完全整合.html">
+            
+                <a href="input-file大全和完全整合.html">
+            
+                    
+                    input-file大全和完全整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="javascript中对象的深度克隆.html">
+            
+                <a href="javascript中对象的深度克隆.html">
+            
+                    
+                    javascript中对象的深度克隆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="jquery-file-upload.html">
+            
+                <a href="jquery-file-upload.html">
+            
+                    
+                    jquery-file-upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="js高级程序设计.html">
+            
+                <a href="js高级程序设计.html">
+            
+                    
+                    js高级程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="javascript-utils.html">
+            
+                <a href="javascript-utils.html">
+            
+                    
+                    javascript-utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="前端兼容性积累.html">
+            
+                <a href="前端兼容性积累.html">
+            
+                    
+                    前端兼容性积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="vue踩坑.html">
+            
+                <a href="vue踩坑.html">
+            
+                    
+                    vue踩坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="把es6编译成es5（兼容性）.html">
+            
+                <a href="把es6编译成es5（兼容性）.html">
+            
+                    
+                    把es6编译成es5（兼容性）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.13" data-path="浏览器全屏显示.html">
+            
+                <a href="浏览器全屏显示.html">
+            
+                    
+                    浏览器全屏显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="整合react+mobx+axios+react-router4.html">
+            
+                <a href="整合react+mobx+axios+react-router4.html">
+            
+                    
+                    整合react+mobx+axios+react-router4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="搭建webpack+react+antd+less+css_modules.html">
+            
+                <a href="搭建webpack+react+antd+less+css_modules.html">
+            
+                    
+                    搭建webpack+react+antd+less+css_modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="prototype、__proto__与constructor.html">
+            
+                <a href="prototype、__proto__与constructor.html">
+            
+                    
+                    prototype、 proto 与constructor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="websocket教程.html">
+            
+                <a href="websocket教程.html">
+            
+                    
+                    websocket教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    后端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="java.html">
+            
+                <a href="java.html">
+            
+                    
+                    java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="jstl.html">
+            
+                <a href="jstl.html">
+            
+                    
+                    jstl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="php.html">
+            
+                <a href="php.html">
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="git常用命令.html">
+            
+                <a href="git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="hello-world.html">
+            
+                <a href="hello-world.html">
+            
+                    
+                    HEXO搭建个人博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="解决远程连接mysql错误1130.html">
+            
+                <a href="解决远程连接mysql错误1130.html">
+            
+                    
+                    解决远程连接mysql错误1130
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    项目管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="系统集成项目管理工程师.html">
+            
+                <a href="系统集成项目管理工程师.html">
+            
+                    
+                    系统集成项目管理工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >浏览器全屏显示</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x5168;&#x5C4F;">&#x5168;&#x5C4F;</h3>
+<pre><code>var docElm = document.documentElement;
+//W3C  
+if (docElm.requestFullscreen) {
+    docElm.requestFullscreen();  
+}
+//FireFox
+else if (docElm.mozRequestFullScreen) {
+    docElm.mozRequestFullScreen();  
+}//Chrome&#x7B49;
+else if (docElm.webkitRequestFullScreen) {
+    docElm.webkitRequestFullScreen();  
+}
+//IE11
+else if (elem.msRequestFullscreen) {
+  elem.msRequestFullscreen();
+}
+</code></pre><h3 id="&#x9000;&#x51FA;&#x5168;&#x5C4F;">&#x9000;&#x51FA;&#x5168;&#x5C4F;</h3>
+<pre><code>if (document.exitFullscreen) {  
+    document.exitFullscreen();  
+}  
+else if (document.mozCancelFullScreen) {  
+    document.mozCancelFullScreen();  
+}  
+else if (document.webkitCancelFullScreen) {  
+    document.webkitCancelFullScreen();  
+}
+else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="把es6编译成es5（兼容性）.html" class="navigation navigation-prev " aria-label="Previous page: 把es6编译成es5（兼容性）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="整合react+mobx+axios+react-router4.html" class="navigation navigation-next " aria-label="Next page: 整合react+mobx+axios+react-router4">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"浏览器全屏显示","date":"2018-07-02T11:34:59.000Z","tags":["js","html5"],"categories":"前端","description":"项目中需要将后台浏览器的窗口全屏，也就是我们点击一个按钮要实现按F11全屏的效果。 在HTML5中,W3C制定了关于全屏的API，就可以实现全屏幕的效果，也可以让页面中的图片，视频等全屏目前只有google chrome 15 +, safri5.1+,firfox10+,IE11支持","level":"1.2.13","depth":2,"next":{"title":"整合react+mobx+axios+react-router4","level":"1.2.14","depth":2,"path":"整合react+mobx+axios+react-router4.md","ref":"整合react+mobx+axios+react-router4.md","articles":[]},"previous":{"title":"把es6编译成es5（兼容性）","level":"1.2.12","depth":2,"path":"把es6编译成es5（兼容性）.md","ref":"把es6编译成es5（兼容性）.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"浏览器全屏显示.md","mtime":"2018-12-04T14:55:48.838Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-13T13:26:48.199Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

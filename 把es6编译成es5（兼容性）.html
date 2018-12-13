@@ -1,0 +1,713 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>把es6编译成es5（兼容性） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="vue2.0编译打包后的语法版本兼容性问题处理">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="浏览器全屏显示.html" />
+    
+    
+    <link rel="prev" href="vue踩坑.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="css进阶.html">
+            
+                <a href="css进阶.html">
+            
+                    
+                    css进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="css3.html">
+            
+                <a href="css3.html">
+            
+                    
+                    css3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="flex弹性布局.html">
+            
+                <a href="flex弹性布局.html">
+            
+                    
+                    flex弹性布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="html5-postmessage窗口之间的通讯.html">
+            
+                <a href="html5-postmessage窗口之间的通讯.html">
+            
+                    
+                    html5-postmessage窗口之间的通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="input-file大全和完全整合.html">
+            
+                <a href="input-file大全和完全整合.html">
+            
+                    
+                    input-file大全和完全整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="javascript中对象的深度克隆.html">
+            
+                <a href="javascript中对象的深度克隆.html">
+            
+                    
+                    javascript中对象的深度克隆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="jquery-file-upload.html">
+            
+                <a href="jquery-file-upload.html">
+            
+                    
+                    jquery-file-upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="js高级程序设计.html">
+            
+                <a href="js高级程序设计.html">
+            
+                    
+                    js高级程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="javascript-utils.html">
+            
+                <a href="javascript-utils.html">
+            
+                    
+                    javascript-utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="前端兼容性积累.html">
+            
+                <a href="前端兼容性积累.html">
+            
+                    
+                    前端兼容性积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="vue踩坑.html">
+            
+                <a href="vue踩坑.html">
+            
+                    
+                    vue踩坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.12" data-path="把es6编译成es5（兼容性）.html">
+            
+                <a href="把es6编译成es5（兼容性）.html">
+            
+                    
+                    把es6编译成es5（兼容性）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="浏览器全屏显示.html">
+            
+                <a href="浏览器全屏显示.html">
+            
+                    
+                    浏览器全屏显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="整合react+mobx+axios+react-router4.html">
+            
+                <a href="整合react+mobx+axios+react-router4.html">
+            
+                    
+                    整合react+mobx+axios+react-router4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="搭建webpack+react+antd+less+css_modules.html">
+            
+                <a href="搭建webpack+react+antd+less+css_modules.html">
+            
+                    
+                    搭建webpack+react+antd+less+css_modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="prototype、__proto__与constructor.html">
+            
+                <a href="prototype、__proto__与constructor.html">
+            
+                    
+                    prototype、 proto 与constructor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="websocket教程.html">
+            
+                <a href="websocket教程.html">
+            
+                    
+                    websocket教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    后端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="java.html">
+            
+                <a href="java.html">
+            
+                    
+                    java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="jstl.html">
+            
+                <a href="jstl.html">
+            
+                    
+                    jstl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="php.html">
+            
+                <a href="php.html">
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="git常用命令.html">
+            
+                <a href="git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="hello-world.html">
+            
+                <a href="hello-world.html">
+            
+                    
+                    HEXO搭建个人博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="解决远程连接mysql错误1130.html">
+            
+                <a href="解决远程连接mysql错误1130.html">
+            
+                    
+                    解决远程连接mysql错误1130
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    项目管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="系统集成项目管理工程师.html">
+            
+                <a href="系统集成项目管理工程师.html">
+            
+                    
+                    系统集成项目管理工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >把es6编译成es5（兼容性）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="1-&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;&#x7B2C;&#x4E00;&#x6B65;">1, &#x89E3;&#x51B3;&#x8FC7;&#x7A0B;&#x7B2C;&#x4E00;&#x6B65;</h2>
+<p>IE&#x6D4F;&#x89C8;&#x5668;&#x62A5;Promise&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x9519;&#x8BEF;
+&#x80CC;&#x666F;&#xFF1A; &#x4E00;&#x4E2A;vue-cli&#x6784;&#x5EFA;&#x7684;vue&#x9879;&#x76EE;&#xFF0C;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;angular&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x4E24;&#x4E2A;&#x9879;&#x76EE;&#x5728;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;&#x4E00;&#x5207;&#x6B63;&#x5E38;&#xFF0C;&#x4F46;&#x662F;ie&#x4E2D;&#x4F1A;&#x62A5;Promise&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x9519;&#x8BEF;</p>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A; </p>
+<h4 id="vue&#x7684;&#x9879;&#x76EE;&#xFF1A;">vue&#x7684;&#x9879;&#x76EE;&#xFF1A;</h4>
+<ul>
+<li><ol>
+<li>&#x3000;npm install babel-polyfill --save</li>
+</ol>
+</li>
+<li><ol>
+<li>&#x3000;&#x5728;main.ts&#x4E2D; import &quot;babel-polyfill&quot;</li>
+</ol>
+</li>
+<li><ol>
+<li>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;vuex&#xFF0C;&#x5219;&#x5728;vuex&#x7684;index.ts&#x6587;&#x4EF6;&#x4E2D;&#x4E5F;&#x8981;  import &quot;babel-polyfill&quot;&#xFF0C;&#x6700;&#x597D;&#x653E;&#x5728; import Vuex from &apos;vuex&apos; &#x7684;&#x524D;&#x9762;</li>
+</ol>
+</li>
+</ul>
+<h4 id="angular&#x7684;&#x9879;&#x76EE;&#xFF1A;">angular&#x7684;&#x9879;&#x76EE;&#xFF1A;</h4>
+<p>&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x6BD4;&#x8F83;&#x8001;&#xFF0C;&#x90FD;&#x662F;&#x91C7;&#x7528;&#x6587;&#x4EF6;&#x5F15;&#x5165;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x7528;import&#x7684;&#x65B9;&#x5F0F;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x8FD9;&#x91CC;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><ol>
+<li>npm install babel-polyfill --save</li>
+</ol>
+</li>
+<li><ol>
+<li>&#x4ECE;  node_modules  &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x627E;&#x5230; _babel-polyfill@6.26.0@babel-polyfill  (&#x540D;&#x5B57;&#x6839;&#x636E;&#x7248;&#x672C;&#x53F7;&#x6539;&#x53D8;)&#x4E0B;&#x7684;  dist  &#x4E2D;  polyfill.min.js &#xFF0C;  &#x5C06;&#x5176;&#x62F7;&#x8D1D;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x662F;babel-polyfill</li>
+</ol>
+</li>
+<li><ol>
+<li>&#x5728;&#x5F15;&#x5165;&#x6587;&#x4EF6;&#x7684;index.html&#x4E2D;&#x5F15;&#x5165;&#x5373;&#x53EF;,  <script src="/babel-polyfill/polyfill.min.js" type="text/javascript"></script></li>
+</ol>
+</li>
+</ul>
+<h2 id="2-&#x89E3;&#x51B3;&#x8FC7;&#x7A0B;&#x7B2C;&#x4E8C;&#x6B65;">2, &#x89E3;&#x51B3;&#x8FC7;&#x7A0B;&#x7B2C;&#x4E8C;&#x6B65;</h2>
+<p><a href="https://www.jianshu.com/p/2b373b0910ed" target="_blank">https://www.jianshu.com/p/2b373b0910ed</a></p>
+<p>&#x5B89;&#x88C5;babel-cli </p>
+<pre><code>npm install --save-dev babel-cli
+</code></pre><p>&#x88C5;Babel&#x7684;preset&#x4EE5;&#x6B63;&#x786E;&#x8BC6;&#x522B;ES6&#x4EE3;&#x7801;  </p>
+<pre><code>npm install --save-dev babel-preset-es2015
+</code></pre><p>&#x7136;&#x540E;&#x518D;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; .babelrc &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>{
+  &quot;presets&quot;: [
+    &quot;es2015&quot;
+  ]
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="vue踩坑.html" class="navigation navigation-prev " aria-label="Previous page: vue踩坑">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="浏览器全屏显示.html" class="navigation navigation-next " aria-label="Next page: 浏览器全屏显示">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"把es6编译成es5（兼容性）","date":"2018-07-03T09:55:16.000Z","tags":"架构","categories":"前端","description":"vue2.0编译打包后的语法版本兼容性问题处理","level":"1.2.12","depth":2,"next":{"title":"浏览器全屏显示","level":"1.2.13","depth":2,"path":"浏览器全屏显示.md","ref":"浏览器全屏显示.md","articles":[]},"previous":{"title":"vue踩坑","level":"1.2.11","depth":2,"path":"vue踩坑.md","ref":"vue踩坑.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"把es6编译成es5（兼容性）.md","mtime":"2018-12-12T13:40:59.371Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-13T13:26:48.199Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

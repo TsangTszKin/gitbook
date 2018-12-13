@@ -1,0 +1,704 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>input-file大全和完全整合 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="input[file]标签的accept属性可用于指定上传文件的 MIME类型 。 例如，想要实现默认上传图片文件的代码，代码可如下： accept="image/*" 但是！ 这段代码在Chrome和Safari等Webkit浏览器下却出现了响应滞慢的问题，可能要等 6~10s 才能弹出文件选择对话框。简直不能忍呀。">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="javascript中对象的深度克隆.html" />
+    
+    
+    <link rel="prev" href="html5-postmessage窗口之间的通讯.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="css进阶.html">
+            
+                <a href="css进阶.html">
+            
+                    
+                    css进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="css3.html">
+            
+                <a href="css3.html">
+            
+                    
+                    css3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="flex弹性布局.html">
+            
+                <a href="flex弹性布局.html">
+            
+                    
+                    flex弹性布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="html5-postmessage窗口之间的通讯.html">
+            
+                <a href="html5-postmessage窗口之间的通讯.html">
+            
+                    
+                    html5-postmessage窗口之间的通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="input-file大全和完全整合.html">
+            
+                <a href="input-file大全和完全整合.html">
+            
+                    
+                    input-file大全和完全整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="javascript中对象的深度克隆.html">
+            
+                <a href="javascript中对象的深度克隆.html">
+            
+                    
+                    javascript中对象的深度克隆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="jquery-file-upload.html">
+            
+                <a href="jquery-file-upload.html">
+            
+                    
+                    jquery-file-upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="js高级程序设计.html">
+            
+                <a href="js高级程序设计.html">
+            
+                    
+                    js高级程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="javascript-utils.html">
+            
+                <a href="javascript-utils.html">
+            
+                    
+                    javascript-utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="前端兼容性积累.html">
+            
+                <a href="前端兼容性积累.html">
+            
+                    
+                    前端兼容性积累
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="vue踩坑.html">
+            
+                <a href="vue踩坑.html">
+            
+                    
+                    vue踩坑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="把es6编译成es5（兼容性）.html">
+            
+                <a href="把es6编译成es5（兼容性）.html">
+            
+                    
+                    把es6编译成es5（兼容性）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="浏览器全屏显示.html">
+            
+                <a href="浏览器全屏显示.html">
+            
+                    
+                    浏览器全屏显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="整合react+mobx+axios+react-router4.html">
+            
+                <a href="整合react+mobx+axios+react-router4.html">
+            
+                    
+                    整合react+mobx+axios+react-router4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="搭建webpack+react+antd+less+css_modules.html">
+            
+                <a href="搭建webpack+react+antd+less+css_modules.html">
+            
+                    
+                    搭建webpack+react+antd+less+css_modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="prototype、__proto__与constructor.html">
+            
+                <a href="prototype、__proto__与constructor.html">
+            
+                    
+                    prototype、 proto 与constructor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="websocket教程.html">
+            
+                <a href="websocket教程.html">
+            
+                    
+                    websocket教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    后端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="java.html">
+            
+                <a href="java.html">
+            
+                    
+                    java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="jstl.html">
+            
+                <a href="jstl.html">
+            
+                    
+                    jstl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="php.html">
+            
+                <a href="php.html">
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="git常用命令.html">
+            
+                <a href="git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="hello-world.html">
+            
+                <a href="hello-world.html">
+            
+                    
+                    HEXO搭建个人博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="解决远程连接mysql错误1130.html">
+            
+                <a href="解决远程连接mysql错误1130.html">
+            
+                    
+                    解决远程连接mysql错误1130
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    项目管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="系统集成项目管理工程师.html">
+            
+                <a href="系统集成项目管理工程师.html">
+            
+                    
+                    系统集成项目管理工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >input-file大全和完全整合</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5728;IE&#x548C;Firefox&#x4E2D;&#x4F7F;&#x7528; accept=&#x201D;image/<em>&#x201D; &#x5C5E;&#x6027;&#x5219;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x54CD;&#x5E94;&#x5EF6;&#x8FDF;&#x7684;&#x95EE;&#x9898;&#x3002;
+&#x4E8E;&#x662F;&#x51E0;&#x7ECF;&#x5C1D;&#x8BD5;&#x540E;&#xFF0C;&#x53D1;&#x73B0;&#x662F; accept=&#x201D;image/</em>&#x201D; &#x5C5E;&#x6027;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5220;&#x6389;&#x5B83;&#x6216;&#x8005;&#x5C06; <em> &#x901A;&#x914D;&#x7B26;&#x4FEE;&#x6539;&#x4E3A;&#x6307;&#x5B9A;&#x7684;MIME&#x7C7B;&#x578B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;Webkit&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x7684;&#x5BF9;&#x8BDD;&#x6846;&#x663E;&#x793A;&#x6EDE;&#x6162;&#x7684;&#x95EE;&#x9898;&#x3002;
+&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;
+accept=&quot;image/gif,image/jpeg,image/jpg,image/png,image/svg&quot;
+accept=&#x201D;image/</em>&#x201D;&#x5C5E;&#x6027;&#x4F1A;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x904D;&#x5386;&#x4E00;&#x6B21;&#x6240;&#x6709;&#x7684;&#x201D;image/<em>&#x201D;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x5F53;&#x6587;&#x4EF6;&#x8F83;&#x591A;&#x65F6;&#xFF0C;&#x6587;&#x4EF6;&#x7684;&#x68C0;&#x9A8C;&#x65F6;&#x95F4;&#x8F83;&#x957F;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x662F;Webkit&#x7684;&#x5E95;&#x5C42;&#x5B9E;&#x73B0;&#x7684;bug&#x3002;
+&#x53E6;&#x5916;&#xFF0C;
+accept=&#x201D;audio/</em>&#x201D;&#x548C; accept=&#x201D;video/<em>&#x201D; &#x5C5E;&#x6027; &#x5728; Webkit&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x4E5F;&#x4F1A;&#x6709;&#x540C;&#x6837;&#x7684;&#x54CD;&#x5E94;&#x5EF6;&#x8FDF;&#x7684;&#x95EE;&#x9898;&#x3002;&#x540C;&#x7406;&#xFF0C;&#x901A;&#x8FC7;&#x5C06; </em> &#x901A;&#x914D;&#x7B26; &#x4FEE;&#x6539;&#x6210;&#x6307;&#x5B9A;&#x7684;MIME&#x7C7B;&#x578B;&#x5C31;&#x53EF;&#x89E3;&#x51B3;&#x3002;</p>
+<pre><code>switch (this.accept) {
+case &quot;pic&quot;:
+        this.MIME = &quot;image/jpg, image/png, image/jpeg, image/gif, image/svg&quot;;
+        break;
+case &quot;doc&quot;:
+        this.MIME = &quot;application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;;
+        break;
+case &quot;ppt&quot;:
+        this.MIME = &quot;application/vnd.ms-powerpoint, application/vnd.openxmlformats-officedocument.presentationml.presentation&quot;;
+        break;
+case &quot;xls&quot;:
+        this.MIME = &quot;application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;;
+        break;
+case &quot;txt&quot;:
+        this.MIME = &quot;text/plain&quot;;
+        break;
+case &quot;pdf&quot;:
+        this.MIME = &quot;application/pdf&quot;;
+        break;
+case &quot;html&quot;:
+        this.MIME = &quot;text/html&quot;;
+        break;
+case &quot;mp3&quot;:
+        this.MIME = &quot;audio/mpeg&quot;;
+        break;
+case &quot;mp4&quot;:
+        this.MIME = &quot;audio/mp4, video/mp4&quot;;
+        break;
+default:
+        break;
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="html5-postmessage窗口之间的通讯.html" class="navigation navigation-prev " aria-label="Previous page: html5-postmessage窗口之间的通讯">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="javascript中对象的深度克隆.html" class="navigation navigation-next " aria-label="Next page: javascript中对象的深度克隆">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"input-file大全和完全整合","date":"2018-07-02T10:45:58.000Z","description":"input[file]标签的accept属性可用于指定上传文件的 MIME类型 。 例如，想要实现默认上传图片文件的代码，代码可如下： accept=\"image/*\" 但是！ 这段代码在Chrome和Safari等Webkit浏览器下却出现了响应滞慢的问题，可能要等 6~10s 才能弹出文件选择对话框。简直不能忍呀。","tags":["DOM","MIME"],"categories":"前端","level":"1.2.5","depth":2,"next":{"title":"javascript中对象的深度克隆","level":"1.2.6","depth":2,"path":"javascript中对象的深度克隆.md","ref":"javascript中对象的深度克隆.md","articles":[]},"previous":{"title":"html5-postmessage窗口之间的通讯","level":"1.2.4","depth":2,"path":"html5-postmessage窗口之间的通讯.md","ref":"html5-postmessage窗口之间的通讯.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"input-file大全和完全整合.md","mtime":"2018-12-12T13:40:59.368Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-13T13:26:48.199Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
