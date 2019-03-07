@@ -440,9 +440,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="hello-world.html">
+        <li class="chapter " data-level="1.4.2" data-path="HEXO搭建个人博客.html">
             
-                <a href="hello-world.html">
+                <a href="HEXO搭建个人博客.html">
             
                     
                     HEXO搭建个人博客
@@ -614,6 +614,47 @@
     -webkit-animation-iteration-count: 1; /*&#x52A8;&#x753B;&#x6B21;&#x6570;*/
     -webkit-animation-delay: 0s; /*&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;*/
 }
+</code></pre><h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x4F53;&#x5230;&#x7F51;&#x9875;&#x4E2D;">&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x4F53;&#x5230;&#x7F51;&#x9875;&#x4E2D;</h3>
+<pre><code>&#x4E00;&#xFF0C;demo
+&lt;style&gt; 
+    @font-face{
+        font-family: myFirstFont;
+        src: url(&quot;SourceHanSansCN-Normal.woff2&quot;) format(&quot;woff2&quot;),
+             url(&quot;SourceHanSansCN-Normal.woff&quot;) format(&quot;woff&quot;),
+             url(&quot;SourceHanSansCN-Normal.ttf&quot;) format(&quot;truetype&quot;),//Firefox&#x3001;Chrome&#x3001;Safari &#x4EE5;&#x53CA; Opera &#x652F;&#x6301; .ttf (True Type Fonts)
+             url(&quot;SourceHanSansCN-Normal.eot&quot;) format(&quot;embedded-opentype&quot;),//Internet Explorer 9+&#x4EC5;&#x652F;&#x6301; .eot (Embedded OpenType)
+             url(&quot;SourceHanSansCN-Normal.svg&quot;) format(&quot;svg&quot;),
+             url(&quot;SourceHanSansCN-Normal.otf&quot;) format(&quot;opentype&quot;);//Firefox&#x3001;Chrome&#x3001;Safari &#x4EE5;&#x53CA; Opera &#x652F;&#x6301;.otf (OpenType Fonts)
+    }
+
+    div{
+        font-family:myFirstFont;
+    }
+&lt;/style&gt;
+
+&#x4E8C;&#xFF0C;@font-face&#x7684;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#xFF1A;
+@font-face {
+      font-family: &lt;YourWebFontName&gt;;
+      src: &lt;source&gt; [&lt;format&gt;][,&lt;source&gt; [&lt;format&gt;]]*;
+      [font-weight: &lt;weight&gt;];
+      [font-style: &lt;style&gt;];
+    }
+
+&#x4E09;&#xFF0C;@font-face&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5B57;&#x4F53;&#x517C;&#x5BB9;&#x6027;
+Webkit/Safari(3.2+)&#xFF1A;TrueType/OpenType TT (.ttf) &#x3001;OpenType PS (.otf)&#xFF1B;
+
+Opera (10+)&#xFF1A; TrueType/OpenType TT (.ttf) &#x3001; OpenType PS (.otf) &#x3001; SVG (.svg)&#xFF1B;
+
+Internet Explorer&#xFF1A; &#x81EA;ie4&#x5F00;&#x59CB;&#xFF0C;&#x652F;&#x6301;EOT&#x683C;&#x5F0F;&#x7684;&#x5B57;&#x4F53;&#x6587;&#x4EF6;&#xFF1B;ie9&#x652F;&#x6301;WOFF&#xFF1B;
+
+Firefox(3.5+)&#xFF1A; TrueType/OpenType TT (.ttf)&#x3001; OpenType PS (.otf)&#x3001; WOFF (since Firefox 3.6)
+
+Google Chrome&#xFF1A;TrueType/OpenType TT (.ttf)&#x3001;OpenType PS (.otf)&#x3001;WOFF since version 6
+
+&#x7531;&#x4E0A;&#x9762;&#x53EF;&#x4EE5;&#x5F97;&#x51FA;&#xFF1A;.eot + .ttf /.otf + svg + woff = &#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5B8C;&#x7F8E;&#x652F;&#x6301;&#x3002;
+
+&#x56DB;&#xFF0C;&#x5E2E;&#x52A9;&#x5DE5;&#x5177;
+https://www.fontke.com/tool/fontface/
 </code></pre>
                                 
                                 </section>
@@ -657,7 +698,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"css3","date":"2016-05-09T23:02:16.000Z","description":"一下关于css3的效果汇集","tags":"css","categories":"前端","level":"1.2.2","depth":2,"next":{"title":"flex弹性布局","level":"1.2.3","depth":2,"path":"flex弹性布局.md","ref":"flex弹性布局.md","articles":[]},"previous":{"title":"css进阶","level":"1.2.1","depth":2,"path":"css进阶.md","ref":"css进阶.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"css3.md","mtime":"2018-12-04T14:55:48.828Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-13T13:26:48.199Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"css3","date":"2016-05-09T23:02:16.000Z","description":"一下关于css3的效果汇集","tags":"css","categories":"前端","level":"1.2.2","depth":2,"next":{"title":"flex弹性布局","level":"1.2.3","depth":2,"path":"flex弹性布局.md","ref":"flex弹性布局.md","articles":[]},"previous":{"title":"css进阶","level":"1.2.1","depth":2,"path":"css进阶.md","ref":"css进阶.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"css3.md","mtime":"2019-03-07T06:20:22.376Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-07T06:27:34.156Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -665,10 +706,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
